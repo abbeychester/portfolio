@@ -1,0 +1,181 @@
+@-webkit-keyframes headingBounce{
+  0%{
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes headingBounce{
+  0%{
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+h2{
+  text-align: center;
+  font-size: 48px;
+  position: relative;
+  animation: headingBounce;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  color: black;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h3{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  animation: headingBounce;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  h2, h3{
+    animation: none;
+  }
+}
+
+.photos{
+  display: flex;
+  flex-flow: column-reverse;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#ABCs, #bean, #bird, #flowerBridge, #frog, #invite, #jid, #weather{
+  height: 60%;
+  width: 60%;
+  padding: 20px;
+  margin:10px;
+}
+
+#weather, #invite, #flowerBridge, #bird, #ABCs{
+  border: 5px dotted black;
+  border-radius: 10px;
+}
+
+#clock{
+  height: 20%;
+  width: 20%;
+  padding: 20px;
+}
+
+#bean{
+  position: relative;
+  left: 30px;
+}
+#weather:hover, #invite:hover, #flowerBridge:hover, #bird:hover, #ABCs:hover, #bean:hover, #frog:hover, #jid:hover{
+filter: gray;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+@media screen and (min-width: 850px){
+
+  .photos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    height: 1000px;
+  }
+
+  #bird, #flowerBridge, #frog, #invite, #jid{
+    height: 80%;
+    width: 80%;
+  }
+
+  #weather, #invite, #flowerBridge, #bird, #ABCs{
+    border: 5px dotted black;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  #weather{
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    position: relative;
+    width: 80%
+  }
+
+  #jid{
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+    padding: 10px;
+  }
+
+  #invite{
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+  }
+
+  #frog{
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    padding: 10px;
+  }
+
+  #flowerBridge{
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+  }
+
+  #clock{
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 1;
+    height: 90%;
+    width: 50%;
+    padding: 20px;
+    position: relative;
+    left: 75px;
+    padding: 10px;
+  }
+
+  #bird{
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+  }
+
+  #bean{
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 1;
+    width: 70%;
+    position: relative;
+    left: 50px;
+    padding: 10px;
+  }
+
+  #ABCs{
+    grid-row: 3 / span 1;
+    grid-column: 3 / span 1;
+    width: 80%
+  }
+
+}
+
+@media screen and (min-width: 1200px){
+
+  .photos{
+    background-image: url("../images/illustrationsCollage.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  img{
+    opacity: 0%;
+  }
+
+}

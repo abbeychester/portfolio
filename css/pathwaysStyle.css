@@ -1,0 +1,244 @@
+@-webkit-keyframes headingBounce{
+  0%{
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes headingBounce{
+  0%{
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.toppage h2, .toppage h3{
+  text-align: center;
+  font-size: 36px;
+  position: relative;
+  animation: headingBounce;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toppage h2, .toppage h3{
+    animation: none;
+  }
+}
+
+#description{
+  font-size: 32px;
+}
+
+h2{
+  text-align: center;
+  color: #333333;
+  font-size: 36px;
+  position: relative;
+  animation: headingBounce;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3, p{
+  font-family: 'Montserrat', sans-serif;
+}
+
+#overview{
+  height:50%;
+  width:50%;
+  display: none;
+}
+
+h3{
+  color:#333333;
+  font-size: 24px;
+}
+
+h4{
+  color: #B35349;
+  font-size: 20px;
+}
+
+.designprocess h3{
+  font-family: "Poiret One", cursive;
+  font-size: 36px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 424px;
+  height: 300px;
+  perspective: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.flip-card p{
+  font-family: "Poiret One", cursive;
+  color:black;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
+
+.personas:focus{
+  outline: 3px solid red;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #B35349;
+  color: black;display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+.flip-card-back {
+  background-color: transparent;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 5px;
+}
+
+.flip-card-back p{
+  font-size: 13px;
+}
+
+.examples1, .examples2{
+  display: flex;
+  flex-flow: column wrap;
+  padding:15px;
+  flex-grow: 1;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.examples1 img{
+  width: 100%;
+  height:100%;
+  border-radius: 20px;
+}
+
+#digitalPrototype{
+  width:100%;
+  height:100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.examples2 a{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+  height:40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  position: relative;
+  top: 40px;
+  font-size: 14px;
+  background-color: #DE7D73;
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+.examples2 a:hover {
+  background-color: #333333;
+  color: white;
+}
+
+.examples2 a:active{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.takeaways p{
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px dotted black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.intro h3{
+  border: 2px dotted black;
+  border-radius: 10px;
+  padding: 15px;
+  color: #B35349;
+}
+
+@media screen and (min-width: 850px){
+
+    .flip-card {
+      display: inline-block;
+      margin-left: 30px;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .userFlow img, .wireframes img, .prototype1 img{
+      width: 60%;
+      height: 60%;
+    }
+
+    button{
+      font-size: 18px;
+      padding: 15px 15px;
+    }
+
+
+      .takeawaysParagraph{
+        display: flex;
+        justify-content:center ;
+        align-items: center;
+      }
+}
+
+@media screen and (min-width: 1200px){
+
+  .examples1{
+    display: inline-block;
+    flex-direction: row;
+  }
+
+  .flip-card{
+    margin-left: 120px;
+  }
+
+}

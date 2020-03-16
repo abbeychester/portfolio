@@ -1,0 +1,343 @@
+body{
+  font-family: "Poiret One", cursive;
+}
+
+h1{
+  color: #B35349;
+  font-size: 64px;
+  position: relative;
+  top: 0px;
+  left: 20px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-grow: 2;
+  text-shadow:
+    0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+.skip{
+  display: none;
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 5;
+}
+
+.title p{
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  left: 15px;
+}
+
+h2{
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+  margin-bottom: 0px;
+  margin-left: 125px;
+  width:250px;
+  word-wrap: break-word;
+  color: transparent;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+a{
+  text-decoration: none;
+}
+
+.work{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 500px;
+  grid-template-rows: repeat(4, auto);
+  grid-row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.work p{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  color:transparent;
+}
+
+#pathways{
+  margin: auto;
+  border-radius: 10px 10px 10px 10px;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  background-image: url("../images/portfolioPathways.png");
+  background-size: contain;
+  text-decoration: none;
+}
+
+#pathways:hover{
+  background-image: url("..images/portfolioPathways.png");
+  opacity: 70%;
+  background-color: rgba(242, 255, 173, .5);
+}
+
+#pathways:hover h2, #course:hover h2, #precisionhealth:hover h2, #illustrations:hover h2{
+  color:black;
+}
+
+#pathways:hover p, #course:hover p, #precisionhealth:hover p, #illustrations:hover p{
+  color:black;
+  font-size: 24px;
+}
+
+#course{
+  margin: auto;
+  border-radius: 10px 10px 10px 10px;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  background-image: url("../images/portfolioCourse.png");
+  background-size: contain;
+}
+
+#course:hover{
+  background-image: url("..images/portfolioCourse.png");
+  opacity:70%;
+  background-color: rgba(199, 224, 255, .5);
+}
+
+#precisionhealth{
+  margin: auto;
+  border-radius: 10px 10px 10px 10px;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  background-image: url("../images/portfolioPH.png");
+  background-size: contain;
+  }
+
+#precisionhealth:hover{
+  background-image: url("..images/portfolioPH.png");
+  opacity: 70%;
+  background-color: rgba(222, 125, 115, .5);
+}
+
+#illustrations{
+  margin: auto;
+  border-radius: 10px 10px 10px 10px;
+  width: 300px;
+  height: 300px;
+  background-image: url("../images/portfolioIllustrations.png");
+  background-size: contain;
+}
+
+#illustrations:hover{
+  background-image: url("..images/portfolioIllustrations.png");
+  opacity: 70%;
+  background-color: rgba(179, 83, 73, .5);
+}
+
+#illustrations:hover p{
+  position: relative;
+  left: 160px;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.nav_links{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav_item a{
+  text-decoration: none;
+  color: #B35349;
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+.nav_item a:hover, a:focus{
+  color: #333333;
+  font-weight: bold;
+}
+
+footer p{
+  position: relative;
+  right: 10px;
+  bottom: 0px;
+  top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  color: black;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav{
+  position: relative;
+}
+
+#active-page a{
+  color: #B35349;
+  font-weight: bold;
+  /*border-bottom: 2px dotted #B35349;*/
+  background-color: rgba(179, 83, 73, .3);
+  border-radius: 7px;
+}
+
+#active-page a:hover, #active-page a:focus{
+  color: #333333;
+  font-weight: bold;
+  /*border-bottom: 2px dotted #333333;*/
+}
+
+@media screen and (min-width: 850px){
+
+  .work{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+  }
+
+  #pathways h2{
+    position: relative;
+    right: 10px;
+    bottom: 30px;
+  }
+
+  #pathways p{
+    position: relative;
+    top: 95px;
+    right: 200px;
+  }
+
+  #precisionhealth h2, #course h2{
+    position: relative;
+    right: 15px;
+    bottom: 30px;
+  }
+
+   #precisionhealth p{
+     position: relative;
+     top: 95px;
+     right: 205px;
+   }
+
+  #course p{
+    position: relative;
+    top: 115px;
+    right: 205px;
+  }
+
+  #illustrations h2{
+    position: relative;
+    bottom: 30px;
+  }
+
+  #illustrations:hover p{
+    position: relative;
+    color: transparent;
+  }
+
+}
+
+@media screen and (min-width: 1200px){
+
+    .work{
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      grid-template-rows: repeat(2,auto);
+      grid-column-gap: 5px;
+      grid-row-gap: 5px;
+    }
+
+    #pathways{
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    #pathways h2{
+      bottom: 60px;
+      right: 30px;
+    }
+
+    #pathways p{
+      right: 185px;
+    }
+
+    #phBox{
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    #precisionhealth h2{
+      bottom: 60px;
+    }
+
+    #precisionhealth p{
+      position: relative;
+      left: -180px;
+    }
+
+    #courseBox{
+      grid-column: 2 / span 1;
+      grid-row: 2 / span 1;
+    }
+
+    #course h2{
+      bottom: 50px;
+    }
+
+    #course p{
+      position: relative;
+      left: -175px;
+      bottom: 15px;
+    }
+
+    #illustrationsBox{
+      grid-column: 4 / span 1;
+      grid-row: 2 / span 1;
+    }
+
+    #illustrations h2{
+      position: relative;
+      right: 55px;
+    }
+
+    #illustrations:hover p{
+      color: transparent;
+    }
+
+}

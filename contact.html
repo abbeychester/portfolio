@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/contactStyle.css">
+    <link rel="shortcut icon" type="image/png" href="images/logo.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Abigail Chester</title>
+    <a class = "skip" id="#main">Skip to Main Content</a>
+    <!-- </head> W3 validator says this is correct, not sure why
+    <body> -->
+    <main id="main">
+        <header>
+          <h1>ABIGAIL CHESTER</h1>
+
+          <nav>
+            <ul class="nav_links">
+              <li class="nav_item"><a href = "about.html">About</a></li>
+              <li class="nav_item"><a href= "index.html">Work</a></li>
+              <li class="nav_item" id="active-page"><a href = "contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+      <div class="contact">
+        <h2>Contact</h2>
+        <form action="https://formspree.io/xjvwjkag" method="POST">
+          <fieldset>
+            <div class="inputInfo">
+            <label for ="name">Name</label><input type="text" id="name" name="name"/>
+            <label for ="email">Email</label><input type="text" id="email" autocomplete="email"/>
+            <label for ="subject">Subject</label><input type="text" id="subject"/>
+            <label for ="message">Message</label><textarea id="message" name="content"></textarea>
+            </div>
+            <div class="submit">
+              <input type="submit" value="Send"/>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <p>Made with &hearts; by Abigail Chester</p>
+    </footer>
+  </body>
+</html>

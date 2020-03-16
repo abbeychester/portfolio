@@ -1,0 +1,391 @@
+@-webkit-keyframes headingBounce{
+  0%{
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes headingBounce{
+  0%{
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+h2{
+  text-align: center;
+  color: #333333;
+  font-size: 36px;
+  font-weight: bolder;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.course p{
+  text-align: center;
+  color: #333333;
+  margin-bottom: 50px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2, .course p{
+  position: relative;
+  animation: headingBounce;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  h2, .course p{
+    animation: none;
+  }
+}
+
+h3{
+  font-size: 32px;
+}
+
+.surveys h3{
+  position: relative;
+  bottom: 160px;
+  left: 240px;
+}
+
+.heuristiceval h3{
+  position: relative;
+  bottom: 100px;
+  left: 230px;
+}
+
+.coursework{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.surveys, .heuristiceval{
+  padding: 80px;
+  width: 100%;
+  height: 70%;
+  border-bottom: 2px dotted black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interviews, .usabilitytest{
+  padding: 80px;
+  width: 100%;
+  height: 70%;
+  border-bottom: 2px dotted black;
+}
+
+.usabilitytest{
+  border: none;
+}
+
+.surveys ul, .interviews ul, .heuristiceval ul, .usabilitytest ul{
+  display: flex;
+  list-style-type: none;
+}
+
+.surveys h3{
+  position: relative;
+  left:180px;
+}
+
+#surveyintro{
+  width: 50%;
+  display: block;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background-image: url("../images/postitSurvey.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  right: 115px;
+  color:transparent;
+}
+
+#heuristicevalintro{
+  width: 50%;
+  margin-left: 20px;
+  margin-right: 40px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background-image: url("../images/postitEval.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  right: 140px;
+  top: 60px;
+  color:transparent;
+}
+
+#interviewintro{
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background-image: url("../images/postitInterview.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  left: 300px;
+  bottom: 125px;
+  color: transparent;
+}
+
+#usabilitytestintro{
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background-image: url("../images/postitTest.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  left: 320px;
+  bottom: 130px;
+  color: transparent
+}
+
+.coursework a{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 120px;
+  height:40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  position: relative;
+  top: 40px;
+  font-size: 14px;
+  background-color: #DE7D73;
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+
+.coursework a:hover {
+  background-color: #333333;
+  color: white;
+}
+
+.coursework a:active{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.usabilitytest a{
+  right: 140px;
+}
+
+.interviewlinks{
+  width: 50%;
+}
+
+.surveys h3, .interviews h3, .heuristiceval h3, .usabilitytest h3{
+  text-align: center;
+  font-size: 26px;
+}
+
+@media screen and (min-width: 850px){
+
+  .coursework{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .surveys{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+
+  .interviews{
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+  }
+
+  .usabilitytest{
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    border: none;
+  }
+
+  .heuristiceval{
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    border: none;
+  }
+
+  #surveyintro{
+    position: relative;
+    left: 45px;
+  }
+
+  .surveys a{
+    position: relative;
+    top: 160px;
+    left: -125px;
+  }
+
+  #interviewintro{
+    position: relative;
+    left: 200px;
+    bottom: 130px;
+  }
+
+  .interviews a{
+    position: relative;
+    top: 245px;
+    left: 170px;
+  }
+
+  #usabilitytestintro{
+    position: relative;
+    left: 145px;
+    bottom: 130px;
+  }
+
+  .usabilitytest a{
+    position: relative;
+    top: 250px;
+    left: 0px;
+  }
+
+  #heuristicevalintro{
+    position: relative;
+    left: 0px;
+    top: -10px;
+  }
+
+  .heuristiceval h3{
+    position: relative;
+    bottom: 165px;
+  }
+
+  .heuristiceval a{
+    position: relative;
+    top: 150px;
+    right: 200px;
+  }
+
+}
+
+@media screen and (min-width: 1200px){
+
+  .coursework{
+    display: flex;
+    flex-direction: row;
+    border: none;
+  }
+
+  .surveys, .interviews, .heuristiceval, .usabilitytest{
+    border: none;
+  }
+
+  .surveys{
+    position: relative;
+    left: 290px;
+  }
+
+  .usabilitytest{
+    position: relative;
+    right: 70px;
+  }
+
+  .surveys h3{
+    left: 240px;
+    bottom: 180px;
+  }
+
+  .interviews a{
+    position: relative;
+    left: 230px;
+    top: 270px;
+  }
+
+  .heuristiceval a{
+    position: relative;
+    left: -330px;
+  }
+
+  .usabilitytest a{
+    position: relative;
+    left: -330px;
+  }
+
+  .surveys a{
+    position: relative;
+    left: -90px;
+  }
+
+  .interviews h3{
+    position: relative;
+    top: 10px;
+    left: 165px;
+  }
+
+  #interviewintro{
+    position: relative;
+    left: 150px;
+    bottom: 115px;
+    height: 220px;
+    width: 220px;
+  }
+
+  .heuristiceval h3{
+    position: relative;
+    left: 90px;
+  }
+
+  #heuristicevalintro{
+    position: relative;
+    height: 270px;
+    width: 270px;
+    left: -120px;
+    top: 20px;
+  }
+
+  .usabilitytest h3{
+    position: relative;
+    right: 330px;
+  }
+
+  #usabilitytestintro{
+    position: relative;
+    left: -340px;
+  }
+
+  #surveyintro{
+    width: 230px;
+    height: 230px;
+    left: 90px;
+  }
+
+}
